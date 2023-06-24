@@ -1,14 +1,15 @@
-package com.example.hello.Hello;
-
+package com.example.wxy.wxy1;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class Hellouse {
-    @RequestMapping(value = "index")
-    public String index(){
-        return "您好";
+
+
+public class wxy2 {
+    @RequestMapping(value = "index2")
+    @ResponseBody
+    public String index2(){
+        return "nd";
     }
 }
-
