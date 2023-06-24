@@ -9,7 +9,7 @@ public class Hellouse {
     @RequestMapping(value = "index")
     @ResponseBody
     public String index(){
-        return "您已成功显示";
+        return "您好";
     }
 }
 
