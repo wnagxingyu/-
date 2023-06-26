@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace = 所需实现的接口全限定名-->
+<mapper namespace="com.example.wxy.mapper.UserMapper">
+    <resultMap id="userResultMap" type="com.example.wxy.entity.User">
+        <id column="id" property="id"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+    </resultMap>
+    <select id="getAllUsers" resultMap="userResultMap">
+        SELECT * FROM User
+</select>
+    <select id="getUserById" resultMap="userResultMap" parameterType="int">
+        SELECT * FROM User WHERE id = #{id}
+    </select>
+   <insert id="createUser" parameterType="com.example.wxy.entity.User">
+      INSERT INTO User (id,username,password) VALUES (#{id},#{username},#{password})
+      </insert>
+</mapper>
