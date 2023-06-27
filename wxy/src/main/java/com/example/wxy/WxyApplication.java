@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.example.wxy.Dao")
+@MapperScan("com.example.wxy.mapper")
 public class WxyApplication {
 
     public static void main(String[] args) {

@@ -1,6 +1,5 @@
 package com.example.wxy.config;
 
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -15,7 +14,6 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @Controller
-
 @EnableSwagger2
 @EnableWebMvc
 public class SwaggerConfig implements WebMvcConfigurer {
@@ -40,7 +38,7 @@ public class SwaggerConfig implements WebMvcConfigurer {
                 .paths(PathSelectors.any()).build();
     }
 
-    //API文档页面显示信息
+   // API文档页面显示信息
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("演示项目")
@@ -49,4 +47,3 @@ public class SwaggerConfig implements WebMvcConfigurer {
     }
 
 }
-

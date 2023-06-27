@@ -1,4 +1,7 @@
 package com.example.wxy.mapper;
 
-public interface ThingsMapper {
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.example.wxy.entity.Things;
+
+public interface ThingsMapper extends BaseMapper<Things> {
 }
