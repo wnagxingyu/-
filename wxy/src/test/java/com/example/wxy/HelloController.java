@@ -1,4 +1,4 @@
-package com.example.wxy.Controller;
+package com.example.wxy;
 import com.example.wxy.entity.User;
 import org.springframework.web.bind.annotation.*;
 
@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 public class HelloController {
-    @RequestMapping(value = "/hello", method = RequestMethod.GET)
+  /*  @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String hello(String name, int age) {
         String sage = String.valueOf(age);
         return "name=" + name + " " + "age=" + sage;
@@ -23,5 +23,5 @@ public class HelloController {
     @RequestMapping(value = "test/*", method = RequestMethod.GET)
     public String test() {
         return "通配符匹配";
-    }
+    }*/
 }

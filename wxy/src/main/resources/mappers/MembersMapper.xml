@@ -4,5 +4,8 @@
 
 <!--namespace = 所需实现的接口全限定名-->
 <mapper namespace="com.example.wxy.mapper.MembersMapper">
+    <select id="list" resultType="com.example.wxy.entity.Members">
+        select * from members
+    </select>
 
 </mapper>
