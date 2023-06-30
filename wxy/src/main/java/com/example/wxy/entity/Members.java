@@ -1,16 +1,13 @@
 package com.example.wxy.entity;
 
-import com.baomidou.mybatisplus.annotation.FieldFill;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableLogic;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 import sun.dc.pr.PRError;
 
 @Data
 public class Members {
-    @TableId
+    @TableId(type = IdType.AUTO)
     private int MembersId;
     private int FamilyId;
     private String MembersSex;

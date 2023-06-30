@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("Relation")
+@RequestMapping("/Relation")
 public class RelationController {
     @Autowired
     private RelationService relationService;
