@@ -26,7 +26,7 @@ public class FamilyController {
     @PostMapping("/list2")
     public List<Family> list2(@RequestBody Family family){
         LambdaQueryWrapper<Family> lambdaQueryWrapper = new LambdaQueryWrapper();
-        lambdaQueryWrapper.eq(Family::getFamilyId,family.getFamilyId());
+        lambdaQueryWrapper.eq(Family::getFamilyName,family.getFamilyName());
         return familyService.list(lambdaQueryWrapper);
     }
 

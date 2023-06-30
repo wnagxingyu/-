@@ -26,7 +26,7 @@ public class MembersController {
     @PostMapping("/list2")
     public List<Members> list2(@RequestBody Members members){
         LambdaQueryWrapper<Members> lambdaQueryWrapper = new LambdaQueryWrapper();
-        lambdaQueryWrapper.eq(Members::getMembersId,members.getMembersId());
+        lambdaQueryWrapper.eq(Members::getMembersName,members.getMembersName());
         return membersService.list(lambdaQueryWrapper);
     }
 }

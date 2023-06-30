@@ -6,6 +6,8 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableLogic;
 import lombok.Data;
 
+import java.util.Date;
+
 @Data
 public class Relation {
     private int MembersId1;
@@ -14,4 +16,5 @@ public class Relation {
     @TableLogic
     @TableField(fill = FieldFill.INSERT)
     private int Deleted;
+
 }

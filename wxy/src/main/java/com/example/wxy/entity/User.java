@@ -18,6 +18,7 @@ public class User {
     @TableLogic
     @TableField(fill = FieldFill.INSERT)
     private int Deleted;
+
 }
 
 
