@@ -7,13 +7,15 @@ import java.util.Date;
 
 @Data
 public class User {
-    @TableId(type = IdType.AUTO)
+
     private int id;
     private String username;
     private String password;
     @TableLogic
     @TableField(fill = FieldFill.INSERT)
     private int Deleted;
+    @TableField(fill = FieldFill.INSERT)
+    private Date updatetime;
 
 }
 

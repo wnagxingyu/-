@@ -6,6 +6,8 @@ import com.baomidou.mybatisplus.annotation.TableLogic;
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import java.util.Date;
+
 @Data
 public class Things {
     private int MembersId;
@@ -17,4 +19,6 @@ public class Things {
     @TableLogic
     @TableField(fill = FieldFill.INSERT)
     private int Deleted;
+    @TableField(fill = FieldFill.INSERT)
+    private Date updatetime;
 }

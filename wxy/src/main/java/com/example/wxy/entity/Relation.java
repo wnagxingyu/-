@@ -16,5 +16,7 @@ public class Relation {
     @TableLogic
     @TableField(fill = FieldFill.INSERT)
     private int Deleted;
+    @TableField(fill = FieldFill.INSERT)
+    private Date updatetime;
 
 }

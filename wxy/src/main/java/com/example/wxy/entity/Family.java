@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import java.util.Date;
+
 @Data
 public class Family {
     @TableId(type = IdType.AUTO)
@@ -16,4 +18,6 @@ public class Family {
     @TableLogic
     @TableField(fill = FieldFill.INSERT)
     private int Deleted;
+    @TableField(fill =  FieldFill.INSERT)
+    private Date updatetime;
 }
