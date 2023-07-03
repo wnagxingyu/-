@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace = 所需实现的接口全限定名-->
+<mapper namespace="com.example.wxy.mapper.MembersMapper">
+    <select id="list" resultType="com.example.wxy.entity.Members">
+        select * from members
+    </select>
+
+    <select id="getMax" resultType="com.example.wxy.entity.Members">
+        SELECT MAX(Members_id) as membersId FROM `members`
+    </select>
+
+    <delete id="delete" parameterType="java.lang.Integer">
+        delete from members where Members_id = #{membersId}
+    </delete>
+
+    <select id="getByFamilyId" resultType="com.example.wxy.entity.Members">
+        SELECT * FROM `members` where Members_id = #{membersId}
+    </select>
+
+    <select id="get" resultType="com.example.wxy.entity.Members">
+        SELECT * FROM `members` where Family_id = #{familyId}
+    </select>
+
+</mapper>
