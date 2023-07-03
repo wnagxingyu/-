@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace = 所需实现的接口全限定名-->
+<mapper namespace="com.example.wxy.mapper.RelationMapper">
+
+    <select id="list" resultType="com.example.wxy.entity.Relation">
+        select * from relation
+    </select>
+
+    <delete id="delete" parameterType="java.lang.Integer">
+        delete from relation where Members_id1 = #{membersId1} and Members_id2 = #{membersId2}
+    </delete>
+
+</mapper>
